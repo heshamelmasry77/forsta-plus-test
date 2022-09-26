@@ -13,7 +13,7 @@ export const questions = [
   {
     id: 1,
     question:
-      "What is the average the airspeed velocity of a (European) unladen swallow?",
+        "What is the average the airspeed velocity of a (European) unladen swallow?",
     answer: "11 meters per second"
   },
   {
@@ -25,9 +25,9 @@ export const questions = [
 
 export default function App() {
   return (
-    <div className="app">
-      <div className="forsta-logo" />
-      <QuestionList questions={questions} />
-    </div>
+      <div className="app">
+        <div className="forsta-logo" />
+        <QuestionList questions={questions} />
+      </div>
   );
 }
