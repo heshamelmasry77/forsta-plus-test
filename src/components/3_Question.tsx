@@ -17,5 +17,12 @@ interface Props {
 }
 
 export function Question({ question, answer }: Props) {
-  return <section className="section"></section>;
+  console.log("question ",question);
+  console.log("answer", answer);
+  return (
+      <section className="section">
+          <h3>{question}</h3>
+          <p>{answer}</p>
+      </section>
+  );
 }
