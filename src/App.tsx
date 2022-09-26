@@ -2,8 +2,6 @@ import React from "react";
 
 import { QuestionList } from "./components/4_QuestionList";
 
-import "./styles.scss";
-
 export const questions = [
   {
     id: 0,
@@ -25,7 +23,7 @@ export const questions = [
 
 export default function App() {
   return (
-      <div className="app">
+      <div className="app p-8">
         <div className="forsta-logo" />
         <QuestionList questions={questions} />
       </div>

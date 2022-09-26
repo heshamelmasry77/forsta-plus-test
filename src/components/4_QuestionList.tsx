@@ -13,18 +13,19 @@ interface Props {
 }
 
 export function QuestionList({ questions }: Props) {
-  console.log("questions: ",questions);
   return (
-    <div className="question-list">
-      {questions.map(({id, question, answer}) => {
-        return (
-            <QuestionComponent
-                key={id}
-                question={question}
-                answer={answer}
-            />
-        );
-      })}
-    </div>
-  );
+      <div className="mt-6 flow-root">
+        <ul role="list" className="-my-5 divide-y divide-gray-200">
+          {questions.map(({id, question, answer}) => {
+            return (
+                <QuestionComponent
+                    key={id}
+                    question={question}
+                    answer={answer}
+                />
+            );
+          })}
+        </ul>
+      </div>
+      );
 }
