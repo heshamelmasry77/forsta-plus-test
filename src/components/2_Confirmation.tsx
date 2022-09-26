@@ -24,5 +24,12 @@ export function Confirmation({
   accept,
   decline
 }: ConfirmationProps) {
-  return <Notification type={type} message={message}></Notification>;
+  return (
+      <div>
+        <button onClick={() => accept()}>accept</button>
+        <button onClick={() => decline()}>decline</button>
+      </div>
+  )
+
+  // return <Notification type={type} message={message}></Notification>;
 }

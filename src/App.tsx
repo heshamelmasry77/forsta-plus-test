@@ -23,7 +23,7 @@ export const questions = [
 
 export default function App() {
   return (
-      <div className="app bg-gray-300">
+      <div className="app p-8">
         <div className="forsta-logo" />
         <QuestionList questions={questions} />
       </div>
