@@ -13,11 +13,18 @@ interface Props {
 }
 
 export function QuestionList({ questions }: Props) {
+  console.log("questions: ",questions);
   return (
     <div className="question-list">
-      {
-        // render questions here
-      }
+      {questions.map(({id, question, answer}) => {
+        return (
+            <QuestionComponent
+                key={id}
+                question={question}
+                answer={answer}
+            />
+        );
+      })}
     </div>
   );
 }
