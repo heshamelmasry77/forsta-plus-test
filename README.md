@@ -1,2 +1,3 @@
 # forsta-plus-test
-Created with CodeSandbox
+
+This is a ReactJS app to show a list of questions and answers.
