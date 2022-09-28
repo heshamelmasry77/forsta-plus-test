@@ -18,7 +18,6 @@ export interface NotificationProps {
 }
 
 export function Notification({ message, type }: NotificationProps) {
-  console.log("type: ",type);
   return <div className={`notification ${[
     type === "success"  && 'notification-success',
     type === "message"  && 'notification-info',

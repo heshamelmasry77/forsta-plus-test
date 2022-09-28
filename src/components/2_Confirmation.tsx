@@ -25,11 +25,10 @@ export function Confirmation({
   decline
 }: ConfirmationProps) {
   return (
-      <div>
-        <button onClick={() => accept()}>accept</button>
-        <button onClick={() => decline()}>decline</button>
+      <div className="flex bg-gray-200 rounded gap-4 p-4">
+        <button className="capitalize hover:underline" onClick={() => accept()}>accept</button>
+        <button className="capitalize hover:underline" onClick={() => decline()}>decline</button>
       </div>
   )
-
   // return <Notification type={type} message={message}></Notification>;
 }
