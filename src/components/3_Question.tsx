@@ -17,26 +17,20 @@ interface Props {
 }
 
 export function Question({question, answer}: Props) {
-    console.log("question ", question);
-    console.log("answer", answer);
     const [isShowAnswer, setIsShowAnswer] = useState(false);
     const [isShowConfirmation, setIsShowConfirmation] = useState(false);
-    const handleClickShowAnswer = () => {
-        setIsShowAnswer(true);
-        console.log("isShowAnswer", isShowAnswer);
-    }
 
     const handleClickShowConfirmation = () => {
-        setIsShowConfirmation(true);
-        console.log("isShowConfirmation", isShowConfirmation);
+        setIsShowConfirmation(!isShowConfirmation);
     }
 
     const handleAccept = () => {
-        console.log("accept clicked")
+        setIsShowAnswer(true);
+        setIsShowConfirmation(false);
     }
 
     const handleDecline = () => {
-        console.log("Decline clicked")
+        setIsShowConfirmation(false);
     }
 
     return (
@@ -50,14 +44,14 @@ export function Question({question, answer}: Props) {
                                 {question}
                             </div>
                         </h3>
-                        <button
+                        {!isShowAnswer && <button
                             onClick={() => {
                                 handleClickShowConfirmation();
                             }}
                             type="button"
                             className="w-full sm:w-auto py-2 px-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-300 dark:disabled:bg-indigo-800 text-white dark:disabled:text-indigo-400 text-sm font-semibold rounded-md shadow focus:outline-none hover:cursor-pointer">
                             Show Answer
-                        </button>
+                        </button>}
                     </div>
                     {isShowAnswer && <p className="mt-1 text-sm text-gray-600 line-clamp-2">{answer}</p>}
                 </div>
